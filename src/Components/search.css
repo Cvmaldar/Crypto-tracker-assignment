@@ -1,0 +1,80 @@
+.search{
+    width: 200%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding:10px;
+    color: #fff
+}
+ .search input{
+    color: #fff;
+    width: 100%;
+    height: 4vh;
+    background-color: rgb(7, 7, 31);
+    border-radius: 6px;
+    border: 1px solid #fff;
+}
+.search input::placeholder{
+    color: gray;
+    padding-left: 6px;
+}
+.search i{
+    cursor: pointer;
+    color: green;
+    position: absolute;
+    margin-left: 86%;
+}
+.coinres{
+    color: #fff;
+    position: absolute;
+    top: 32px;
+    height: 40vh;
+    right: 0px;
+    left: 20px;
+    width:180%;
+    border-radius: 6px;
+    overflow-x: hidden;
+    padding-top: 8px;
+    padding-left: 4px;
+    background-color:  rgb(7, 7, 31,0.6);
+    backdrop-filter: blur(20px); 
+}
+.coinres li{
+    list-style: none;
+}
+.coinsearch{
+    display: flex;
+    cursor: pointer;
+    margin-right: 20px;
+    justify-content: flex-start;
+}
+.coinsearch img{
+    padding-bottom: 4px;
+}
+.coinsearch span{
+    margin-left: 7px;
+}
+.searchinp{
+    position: relative;
+}
+.spin{
+   display: flex;
+    margin: auto;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    margin-top: 7rem;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
