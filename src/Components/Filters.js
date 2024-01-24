@@ -3,8 +3,8 @@ import { CryptoContext } from '../Context/cryptocontext';
 import "./filter.css"
 import Search from './Search';
 const Filters = () => {
-   const {setcurrency}= useContext(CryptoContext)
-  //  ,setSortBy
+   const {setcurrency,setSortBy}= useContext(CryptoContext)
+  
     const currencyRef = useRef(null)
 
     const handleCurrencySubmit=(e)=>{
@@ -13,12 +13,12 @@ const Filters = () => {
         setcurrency(val);
         currencyRef.current.value="";
     }
-    // const handleSortBy=(e)=>{
-    //     e.preventDefault();
-    //     let val=e.target.value;
-    //     console.log(val);
-    //     setSortBy(val);
-    // }
+    const handleSortBy=(e)=>{
+        e.preventDefault();
+        let val=e.target.value;
+        console.log(val);
+        setSortBy(val);
+    }
 
     return (
       <>
@@ -35,10 +35,11 @@ const Filters = () => {
         </div>
         <div className='sortclass'>
             <span >Sort By:</span>
-            {/* onClick={handleSortBy} */}
-             <select name='sortby'   >
-               <option value=" market_cap_asc"> market_cap_asc</option>
+            
+             <select name='sortby'  onClick={handleSortBy} >
+              
                 <option value=" market_cap_desc">market_cap_desc</option>
+                <option value=" market_cap_asc"> market_cap_asc</option>
                 <option value=" volume_asc">volume_asc</option>
                 <option value=" id_asc">id_asc</option>
                 <option value=" volume_desc">volume_desc</option>

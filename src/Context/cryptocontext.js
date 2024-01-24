@@ -12,15 +12,27 @@ export const CryptoContext=createContext({});
 export const CryptoProvider=({children})=>{
   const [CryptoData, setCryptoData] = useState();
   const [SearchData, setSearchData] = useState();
+  const [coinData, setCoinData] = useState();
   const [coinSearch, setcoinSearch] = useState("");
   const [currency, setcurrency] = useState("usd");
-  // const [SortBy, setSortBy] = useState("market_cap_desc");
+  const [sortBy, setSortBy] = useState("market_cap_desc");
+  const [page, setPage] = useState(1);
+  const [totalpages, setTotalPages] = useState(250);
 
   const getCrypto = async () => {
     try {
       const data = await fetch(
-        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&ids=${coinSearch}&order=market_cap_desc&per_page=10&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d&locale=en`
-      ).then(async(res) => res.json());
+        `https://api.coingecko.com/api/v3/coins/list`
+      ).then(async(res) => res.json()).then((json)=>json);
+      console.log(data);
+      setTotalPages(data.length);
+    } catch (err) {
+      console.log(err);
+    }
+    try {
+      const data = await fetch(
+        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&ids=${coinSearch}&order=${sortBy}&per_page=10&page=${page}&sparkline=false&price_change_percentage=1h%2C24h%2C7d&locale=en`
+      ).then(async(res) => res.json()).then((json)=>json);
       console.log(data);
       setCryptoData(data);
     } catch (err) {
@@ -39,12 +51,25 @@ export const CryptoProvider=({children})=>{
       console.log(err);
     }
   };
+  const getCoinData = async (coinid) => {
+    
+    try {
+      const data = await fetch(
+        `https://api.coingecko.com/api/v3/coins/${coinid}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=true&sparkline=false`
+      )
+        .then((res) => res.json())
+        .then((json) => json);
 
+      
+      setCoinData(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   useEffect(() => {
     getCrypto();
+  }, [coinSearch,currency,sortBy,page]);
   
-  }, [coinSearch,currency]);
-  // ,SortBy
 
   return (
     <div>
@@ -57,7 +82,10 @@ export const CryptoProvider=({children})=>{
           setSearchData,
           currency,
           setcurrency,
-          // SortBy,setSortBy
+          sortBy,setSortBy,
+          page, setPage,
+          totalpages,getCoinData,
+          coinData,
         }}
       >
         {children}

@@ -1,11 +1,15 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { CryptoContext } from '../Context/cryptocontext';
+import Pagination from './Pagination';
 import "./table.css"
 const Tablecomponent = () => {
     
     const {CryptoData,currency} = useContext(CryptoContext);
    
+    
     return (
+        <div className='rectangle'>
         <div className='table'>
         {
             CryptoData? <table>
@@ -25,7 +29,7 @@ const Tablecomponent = () => {
                 </thead>
                 <tbody>
                     {
-                        CryptoData.map(data=>{
+                    CryptoData.map(data=>{
                         return(
     
                 
@@ -33,8 +37,8 @@ const Tablecomponent = () => {
                         <td>
                         <img id='coinimage' src={data.image} alt={data.name}/> 
                         </td>
-                        <td id='symbol'>{data.symbol}</td>
-                        <td>{data.name}</td>
+                        <td id='symbol'><Link to={`coins/${data.id}`} className="link">{data.symbol}</Link></td>
+                       <td className='link'><Link to={`coins/${data.id}`} className="link">{data.name}</Link></td>
                         <td>
                             {
                                 new Intl.NumberFormat("en-IN",{
@@ -57,8 +61,12 @@ const Tablecomponent = () => {
                     
                     }
                 </tbody>
-            </table>:null
+            </table>:<div className='spin'>
+                          
+                          </div>
         }
+        </div>
+        <div><Pagination /></div>
             
         </div>
     );

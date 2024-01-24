@@ -19,7 +19,7 @@
 
 }
 #coinimage{
-    width: 70px; /* Adjust the width as needed */
+    width: 70px; 
     height: auto;
 }
 #symbol{
@@ -35,3 +35,65 @@
     color: green;
     font-size: 20px;
   }
+  .spin{
+    display: flex;
+     margin: auto;
+     border: 4px solid #f3f3f3;
+     border-top: 4px solid #3498db;
+     border-radius: 50%;
+     width: 40px;
+     margin-top: 30rem;
+     height: 40px;
+     animation: spin 1s linear infinite;
+ }
+ 
+ @keyframes spin {
+     0% {
+       transform: rotate(0deg);
+     }
+     100% {
+       transform: rotate(360deg);
+     }
+   }
+    .table td .link{
+        color: aliceblue;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+   @media screen and (max-width:769px){
+    @media (max-width: 769px) {
+        .table {
+          font-size: 14px; 
+        }
+      
+        .table th,
+        .table td {
+          padding: 8px; 
+        }
+      
+        .table th:nth-child(1),
+        .table td:nth-child(3),
+        .table th:nth-child(5),
+        .table td:nth-child(5),
+        .table th:nth-child(6),
+        .table td:nth-child(6),
+        .table th:nth-child(9),
+        .table td:nth-child(9) {
+          display: none; 
+        }
+      
+        #coinimage {
+          max-width: 30px; 
+        }
+      }
+      .table{
+    
+        width: 60%;
+        padding: auto;
+        margin: auto; 
+        margin-top: 20rem;
+        margin-left: 21px;
+    }
+
+   }

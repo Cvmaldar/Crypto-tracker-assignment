@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "./Navbar.css"
 const Navbar = () => {
 
@@ -15,13 +16,13 @@ const Navbar = () => {
           <div>
             <ul id='navbar' className={click?"#navbar active":"#navbar"}>
               <li>
-                <a href="index.html" className='active'>Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="index.html">About</a>
+              <Link to="/about">About</Link>
               </li>
               <li>
-                <a href="index.html">contact</a>
+              <Link to="/contact">Contact</Link>
               </li>
             </ul>
           </div>
@@ -31,6 +32,8 @@ const Navbar = () => {
        
           </div>
         </nav>
+        <h1>Crypto Dashboard</h1>
+        <p>Discover all details about your favorite cryptocurrency like: prices, changes, and more!</p>
       </>
     );
 };

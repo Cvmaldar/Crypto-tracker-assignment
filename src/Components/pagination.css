@@ -1,0 +1,82 @@
+.pagination{
+    display: flex;
+    margin: auto;
+    color: aliceblue;
+    
+}
+.pagination ul{
+    display: flex;
+    margin: auto;
+    margin-top: 2rem;
+    margin-right:35em;
+
+}
+.pagination ul li{
+list-style: none;    
+color:green ;
+font-weight: bold;
+padding: auto;
+padding-right: 1px;
+padding-left: 12px;
+padding-bottom: 30px;
+}
+.pagination ul li button{
+    background-color: rgb(7, 7, 31);
+    border: 1px solid  rgb(7, 7, 31);
+    color: #333;
+    font-weight: bold;  
+    color: green;
+    border-radius: 50%;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+.pagination ul li button.active{
+    background-color:  rgba(38, 38, 56, 0.6);
+    color: #fff;
+}
+.pagination ul li .next{
+    padding-left: 10px;
+}
+@media screen and (max-width:769px){
+    .pagination{
+        display:flex;
+        margin: auto;
+        color: aliceblue;
+       margin-left: 120px;
+    }
+    .pagination ul{
+        display: flex;
+        margin: auto;
+        margin-top: 2rem;
+        margin-left:-8rem;
+    
+    }
+    .pagination ul li{
+    list-style: none;    
+    /* color:green ; */
+    font-weight: bold;
+    padding: auto;
+    padding-right: 1px;
+    padding-left: 12px;
+    padding-bottom: 30px;
+    }
+    .pagination ul li button{
+        height: 4vh;
+        width: 1vw;
+        background-color: rgb(7, 7, 31);
+        border: 1px solid  rgb(7, 7, 31);
+        color: #333;
+        font-weight: bold;  
+        color: green;
+        border-radius: 50%;
+        padding: 8px 16px;
+        cursor: pointer;
+    }
+    .pagination ul li button.active{
+        background-color:  rgba(38, 38, 56, 0.6);
+        color: #fff;
+    }
+    .pagination ul li .next{
+        padding-left: 10px;
+    }
+}

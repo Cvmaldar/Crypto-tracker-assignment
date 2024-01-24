@@ -5,13 +5,15 @@
     justify-content: space-between;
     background-color: #1b2430;
     padding: 0px 35px;
+    height: 10vh;
     box-shadow: 0 5px 15px rgba(0,0,0,0.06);
 }
 .nav a{
     text-decoration: none;
 }
 .logoname{
-    color: aliceblue;
+    color: aquamarine;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-left: -20px;
     text-decoration: none;
     font-family: 'Times New Roman', Times, Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif;
@@ -55,8 +57,27 @@
 #mobile{
     display: none;
 }
-
+h1{
+    color:bisque;
+    margin-top: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+p{
+    color: aqua;
+    margin-top: 16px;
+    font-family: cursive;
+}
 @media screen and (max-width:769px) {
+    .nav{
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1b2430;
+        height: 8vh;
+        padding: 0px 35px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    }
     #navbar{
         display: flex;
         flex-direction: column;
@@ -64,7 +85,8 @@
         justify-content:flex-start;
         position: fixed;
         top: 50px;
-        right: -300px;
+        z-index: 1;
+        right: -320px;
         width: 300px;
         height: 100vh;
         background: #2a3239;
@@ -82,5 +104,15 @@
     #mobile i{
         font-size:24px;
         cursor: pointer;
+    }
+    h1{
+        color:bisque;
+        margin-top: 40px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    p{
+        color: aqua;
+        margin-top: 16px;
+        font-family: cursive;
     }
 }

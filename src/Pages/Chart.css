@@ -1,0 +1,69 @@
+.chart{
+  margin: auto;
+  margin-left:30% ;
+}
+.chart h1{
+  margin-left: 160px;
+}
+.chart h1 .color{
+  color: aquamarine;
+}
+.chart h2{
+  color: cadetblue;
+  margin-top: 20px;
+  margin-left: 260px;
+}
+.chart p{
+  margin-left: 180px;
+}
+.linechart{
+  margin-left: 100px;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+.data{
+color: aliceblue;
+margin-top: 1%;
+margin-left: 40%;
+}
+.data ul li{
+  list-style: none;
+  margin-top: 20px;
+  font-weight: bold;
+}
+.data ul li #coinimage{
+  margin-left: 4%;
+
+}
+@media screen and (max-width:769px){
+
+  .chart {
+    margin: auto;
+    margin-left: 3%;
+  }
+
+  .chart h1 {
+    margin-left: 20px;
+  }
+
+  .chart h1 .color {
+    color: aquamarine;
+  }
+
+  .chart h2 {
+    margin-left: 20px; 
+  }
+
+  .chart p {
+    margin-left: 20px; 
+  }
+
+  .linechart {
+    margin-left:01px; 
+  }
+
+  .data {
+    margin-left: 20px; 
+  }
+
+}

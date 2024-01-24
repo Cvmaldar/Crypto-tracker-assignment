@@ -24,6 +24,7 @@ const SearchInput=({handleSearch})=>{
     }
     return (
         <>
+        
             <form className='search' onClick={handlesubmit} >
                 <input type="text" name='search' placeholder='search ....' onChange={handleInput} value={searchText}/>
                 <i  class="fa-solid fa-magnifying-glass"></i>

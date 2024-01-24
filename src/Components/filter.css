@@ -67,3 +67,85 @@ margin-right: 2px;
  option{
     background-color:  rgb(7, 7, 31);
 }
+
+@media screen and (max-width:769px){
+    .filter{
+    margin: auto;
+    border-radius: 8px;
+    
+    margin-top: 8rem;
+    color: aliceblue;
+    width: 100%;
+    position: absolute;
+   
+    height: 8vh;
+    border: 2px solid gray;
+    } 
+    .currency{
+        position: relative;
+        display:inline-block;
+        width: 100%;
+        margin-right: 100px;
+        margin-top: 70px;
+    }
+    .curform{
+        position: relative;
+        margin-left: 2px;
+      
+
+        
+    }
+    .curform label{
+        font-weight:bold ;
+        font-size: large;
+        margin-right: 170px;
+        padding: auto;
+    }
+    .curform input{
+        position:absolute;
+        width: 20%;
+        height: 4vh;
+       margin-top:-1px;
+        margin-left:-160px;
+        color: #fff;
+       
+        background-color:  rgb(7, 7, 31,0.6);
+        border: 1px solid #fff;
+        border-radius: 6px;
+    } 
+    
+    .curform button{
+        position: absolute;
+        margin-top: -2px;
+        margin-left: -80px;
+        border-radius: 10px;
+        background-color: green;
+        border: none;
+        height: 5vh;
+    }
+    .sortclass{
+        position: absolute;
+        margin-top:120px ;
+         margin-left: 30px;
+     
+     }
+     .sortclass span{
+     font-weight: bold;
+     margin-right: 2px;
+     }
+     .sortclass select {
+         width: 49vw;
+         font-weight: bold;
+         height: 6vh;
+         
+         border-radius: 6px;
+         color: #fff;
+         background-color:  rgb(7, 7, 31);
+     
+     }
+     .sortclass select option{
+        
+         background-color:  rgb(7, 7, 31);
+     }
+    
+}
